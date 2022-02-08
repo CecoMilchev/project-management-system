@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "H6l4PEjHgRerSoXRVGv4oGv9A6/WNpMFOpKnb+9NSFk=",
+  "Source": "PMS-Server",
+  "BasePath": "_content/PMS-Server",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
