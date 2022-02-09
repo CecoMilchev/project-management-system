@@ -1,0 +1,16 @@
+<h1 id="tableLabel">Projects</h1>
+
+<table *ngIf="projects">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Full Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of projects">
+          <td>{{ project.name }}</td>
+          <td><a routerLink="/projects/{{project.name}}">View Tasks</a></td>
+        </tr>
+    </tbody>
+</table>
