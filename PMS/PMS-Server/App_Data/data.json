@@ -1,0 +1,67 @@
+﻿[
+  {
+    "name": "Fiddler1",
+    "tasks": [
+      {
+        "type": "Story",
+        "title": "Circular Progressbar widget",
+        "description": "Create a widget that should show completeness of a task in percetange from 1 to 100.",
+        "assignee": "Tsvetomir",
+        "priority": "Normal",
+        "status": "ToDo",
+        "estimate": 3,
+        "createdAt": "2022-02-02T22:00:00.000Z"
+      },
+      {
+        "type": "Bug",
+        "title": "Circular Progressbar not rendered with latest jQuery version",
+        "description": "When the Circular ProgressBar is used with the latest jQuery version an error is thrown that leads to the widget not being rendered",
+        "assignee": "Peter",
+        "priority": "High",
+        "status": "InProgress",
+        "estimate": 1,
+        "createdAt": "2022-02-07T20:00:00.000Z"
+      },
+      {
+        "type": "Story",
+        "title": "Add color options to Circular Progressbar widget",
+        "description": "Add color pallete options to the Circular Progressbar widget so that the user can choose a coloring that matches the rest of the appearance of their application.",
+        "assignee": "Angel",
+        "priority": "Low",
+        "status": "ToDo",
+        "estimate": 2,
+        "createdAt": "2022-02-08T22:00:00.000Z"
+      },
+      {
+        "type": "Bug",
+        "title": "Grid not exporting the data to Excel",
+        "description": "With R1 2022, the grid stopped downloading an xlsx file when the user clicks on the 'Export to Excel' button",
+        "assignee": "Tsvetomir",
+        "priority": "Critical",
+        "status": "Done",
+        "estimate": 3,
+        "createdAt": "2022-02-01T18:00:00.000Z"
+      },
+      {
+        "type": "Story",
+        "title": "Allow the DataSource widge to be sorted by multiple fields",
+        "description": "Implement an enhancement that would allow the user to sort the data in the data source by multiple fields",
+        "assignee": "Ivan",
+        "priority": "Low",
+        "status": "ReadyForTest",
+        "estimate": 3,
+        "createdAt": "2022-01-02T11:00:00.000Z"
+      },
+      {
+        "type": "Bug",
+        "title": "DataSource LINQ expressions throw error with .NET 6",
+        "description": "The LINQ expressions used by the DataSource throw a server error when used in a .NET 6 project",
+        "assignee": "Tsvetomir",
+        "priority": "Critical",
+        "status": "ToDo",
+        "estimate": 1,
+        "createdAt": "2022-02-10T22:00:00.000Z"
+      }
+    ]
+  }
+]

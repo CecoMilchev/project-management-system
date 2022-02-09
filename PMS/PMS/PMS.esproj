@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.4.0-alpha">
   <PropertyGroup Label="Globals">
-    <ProjectGuid>e4a5443c-979f-482e-9931-9338d6c5ad3c</ProjectGuid>
+    <ProjectGuid>f48414bd-5d2b-472f-ae15-8e9191991f4a</ProjectGuid>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <StartupCommand>npm start</StartupCommand>
@@ -19,4 +19,9 @@
     <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
     <Exec WorkingDirectory="$(SpaRoot)" Command="npm install" />
   </Target>
+  <PropertyGroup>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+    <TypeScriptNoEmitOnError>true</TypeScriptNoEmitOnError>
+    <TypeScriptNoImplicitReturns>true</TypeScriptNoImplicitReturns>
+  </PropertyGroup>
 </Project>

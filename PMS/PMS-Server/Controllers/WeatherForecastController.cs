@@ -32,7 +32,8 @@ namespace PMS_Server.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
-            //return projectRepository.GetProjects();
+            var a = projectRepository.GetProjects();
+
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

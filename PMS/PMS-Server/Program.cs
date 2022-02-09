@@ -11,9 +11,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
 builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
-builder.Services.AddDbContext<PMSContext>(opt =>
-    opt.UseInMemoryDatabase("ProjectList"));
+builder.Services.AddSingleton<IPMSContext, PMSContext>();
 
 var app = builder.Build();
 
@@ -31,11 +31,3 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
-
-using (var scope = app.Services.CreateScope())
-{
-    var dbContext = scope.ServiceProvider.GetRequiredService<PMSContext>();
-
-    dbContext.Projects.Add(new PMS_Server.Data.Models.Project() { Name = "name" });
-    // use context
-}

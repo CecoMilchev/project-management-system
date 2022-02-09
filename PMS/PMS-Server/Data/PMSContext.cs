@@ -1,49 +1,34 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PMS_Server.Data.Contracts;
 using PMS_Server.Data.Models;
+using System.Collections.ObjectModel;
+using System.Reflection;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace PMS_Server.Data
 {
-    public class PMSContext : DbContext, IPMSContext
+    public class PMSContext : IPMSContext
     {
-        public PMSContext(DbContextOptions<PMSContext> options)
-          : base(options)
+        public PMSContext()
         {
+            this.Projects = SeedData();
         }
 
-        public DbSet<Project> Projects { get; set; } = null!;
-        public DbContext DbContext => this;
+        public IEnumerable<Project> Projects { get; set; }
 
-    //    private IEnumerable<Project> projects;
-    //    public PMSContext()
-    //    {
-    //        this.projects = new List<Project>();
-    //    }
+        private IEnumerable<Project> SeedData()
+        {
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true
+            };
 
-    //    public TodoContext(DbContextOptions<TodoContext> options)
-    //: base(options)
-    //    {
-    //    }
+            options.Converters.Add(new JsonStringEnumConverter());
 
-    //    public DbSet<TodoItem> TodoItems { get; set; } = null!;
-    //    //public IEnumerable<Project> Projects {
-    //    //    get
-    //    //    {
-    //    //        return new List<Project>() { new Project() { Name="name"} };
-    //    //    }
-    //    //}
+            var res = JsonSerializer.Deserialize<IEnumerable<Project>>(File.ReadAllText(@"App_Data\data.json"), options);
 
-    //    //IEnumerable<Project> IPMSContext.Projects { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    //    public IEnumerable<Project> Projects
-    //    {
-    //        get
-    //        {
-    //            return this.projects;
-    //        }
-    //        set
-    //        {
-    //            this.projects = new List<Project>() { new Project() { Name = "name" } };
-    //        }
-    //    }
+            return res ?? new Collection<Project>();
+        }
     }
 }

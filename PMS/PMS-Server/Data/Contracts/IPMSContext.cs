@@ -5,7 +5,6 @@ namespace PMS_Server.Data.Contracts
 {
     public interface IPMSContext
     {
-        DbContext DbContext { get; }
-        DbSet<Project> Projects { get; set; }
+        IEnumerable<Project> Projects { get; set; }
     }
 }

@@ -4,6 +4,6 @@
     {
         public string Name { get; set; }
 
-        //public IEnumerable<ProjectTask> Tasks { get; set; }
+        public IEnumerable<ProjectTask> Tasks { get; set; }
     }
 }

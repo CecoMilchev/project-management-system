@@ -5,8 +5,8 @@ namespace PMS_Server.Data.Repositories
 {
     public class ProjectRepository : IProjectRepository
     {
-        private PMSContext context;
-        public ProjectRepository(PMSContext context)
+        private IPMSContext context;
+        public ProjectRepository(IPMSContext context)
         {
             this.context = context;
         }
