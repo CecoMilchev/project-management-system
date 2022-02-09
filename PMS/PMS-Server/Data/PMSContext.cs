@@ -17,7 +17,7 @@ namespace PMS_Server.Data
 
         public IEnumerable<Project> Projects { get; set; }
 
-        private IEnumerable<Project> SeedData()
+        private static IEnumerable<Project> SeedData()
         {
             var options = new JsonSerializerOptions
             {
