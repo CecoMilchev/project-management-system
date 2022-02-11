@@ -6,6 +6,7 @@ namespace PMS_Server.Data.Models
 {
     public class ProjectTask
     {
+        public int ID { get; set; }
         public ItemType Type{ get; set; }
         public string? Title { get; set; }
         public string? Description { get; set; }

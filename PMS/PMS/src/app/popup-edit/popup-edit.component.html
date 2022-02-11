@@ -1,0 +1,59 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Title</label>
+      <input type="text" formControlName="title" class="form-control" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Status</label>
+      <select formControlName="status" class="form-control">
+        <option value="0">To Do</option>
+        <option value="1">In Progress</option>
+        <option value="2">Ready For Test</option>
+        <option value="3">Done</option>
+      </select>
+    </div>  
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Priority</label>
+      <select formControlName="priority" class="form-control">
+        <option value="0">Low</option>
+        <option value="1">Medium</option>
+        <option value="2">High</option>
+        <option value="3">Critical</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Assignee</label>
+      <input type="text" formControlName="assignee" class="form-control" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Estimate</label>
+      <input type="text" formControlName="estimate" class="form-control" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Description</label>
+      <input type="text" formControlName="description" class="form-control" />
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col">
+      <label>Type</label>
+      <select formControlName="type" class="form-control">
+        <option value="0">Story</option>
+        <option value="1">Bug</option>
+      </select>
+    </div>
+  </div>
+  <hr />
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

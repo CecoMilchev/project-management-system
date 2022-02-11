@@ -1,0 +1,21 @@
+.span-icon{
+    margin-right: 5px;
+}
+
+.responsive-table a {
+  background-color: white;
+  color: black;
+  border: 2px solid #04AA6D;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+  .responsive-table a:hover {
+    background-color: #059862;
+    color: white;
+    cursor:grab;
+  }
