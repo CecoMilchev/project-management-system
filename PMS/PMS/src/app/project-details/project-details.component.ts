@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Project } from '../../interfaces/project.interface';
 import { ProjectsService } from '../projects.service';
 
@@ -24,10 +25,14 @@ export class ProjectDetailsComponent implements OnInit {
 
   getProject(): void {
     const name = this.route.snapshot.paramMap.get('name');
-    this.project = this.projectService.getProject(name || '');
+    if (!localStorage.getItem("projects")) {
+      this.projectService.getData().subscribe(result => {
+        this.project = result.find(p => p.name === name)!;
+        localStorage.setItem("projects", JSON.stringify(result));
+      }, error => console.error(error));
+    } else {
+      const projects: Project[] = JSON.parse(localStorage.getItem("projects") || '{}');
+      this.project = projects.find(p => p.name.toLowerCase() === name)!;
+    }
   }
-
-  //goBack(): void {
-  //  this.location.back();
-  //}
 }

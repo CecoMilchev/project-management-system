@@ -1,0 +1,21 @@
+<table class="table responsive-table">
+  <thead>
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Status</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let task of tasks">
+      <td data-label="Title"><strong>{{ task.title}}</strong></td>
+      <td data-label="Status" [ngSwitch]="task.status">
+        <span *ngSwitchCase="0">To Do</span>
+        <span *ngSwitchCase="1">In Progress</span>
+        <span *ngSwitchCase="2">Ready For Test</span>
+        <span *ngSwitchCase="3">Done</span>
+      </td>
+      <td data-label="Amount"><a (click)="openModal(task.id)">View Details</a><a (click)="openEditModal(task.id)"><span class="span-icon">&#x270E;</span>Edit</a></td>
+    </tr>
+  </tbody>
+</table>

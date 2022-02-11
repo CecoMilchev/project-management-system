@@ -1,8 +1,9 @@
 ﻿[
   {
-    "name": "Fiddler1",
+    "name": "Kendo",
     "tasks": [
       {
+        "id": 1,
         "type": "Story",
         "title": "Circular Progressbar widget",
         "description": "Create a widget that should show completeness of a task in percetange from 1 to 100.",
@@ -13,6 +14,7 @@
         "createdAt": "2022-02-02T22:00:00.000Z"
       },
       {
+        "id": 2,
         "type": "Bug",
         "title": "Circular Progressbar not rendered with latest jQuery version",
         "description": "When the Circular ProgressBar is used with the latest jQuery version an error is thrown that leads to the widget not being rendered",
@@ -23,6 +25,7 @@
         "createdAt": "2022-02-07T20:00:00.000Z"
       },
       {
+        "id": 3,
         "type": "Story",
         "title": "Add color options to Circular Progressbar widget",
         "description": "Add color pallete options to the Circular Progressbar widget so that the user can choose a coloring that matches the rest of the appearance of their application.",
@@ -33,6 +36,7 @@
         "createdAt": "2022-02-08T22:00:00.000Z"
       },
       {
+        "id": 4,
         "type": "Bug",
         "title": "Grid not exporting the data to Excel",
         "description": "With R1 2022, the grid stopped downloading an xlsx file when the user clicks on the 'Export to Excel' button",
@@ -43,9 +47,81 @@
         "createdAt": "2022-02-01T18:00:00.000Z"
       },
       {
+        "id": 5,
         "type": "Story",
-        "title": "Allow the DataSource widge to be sorted by multiple fields",
-        "description": "Implement an enhancement that would allow the user to sort the data in the data source by multiple fields",
+        "title": "Improve Form API reference and TS definitions",
+        "description": "Document items.layout and items.grid in the API reference and update the TS file.",
+        "assignee": "Peter",
+        "priority": "Low",
+        "status": "Done",
+        "estimate": 1,
+        "createdAt": "2021-01-02T11:00:00.000Z"
+      },
+      {
+        "id": 6,
+        "type": "Bug",
+        "title": "Unexpected new line added when click a button (Firefox only)",
+        "description": "Only reproducible in Firefox. When any of the Kendo UI buttons is clicked, a new line is added that distorts the view.",
+        "assignee": "Tsvetomir",
+        "priority": "High",
+        "status": "InProgress",
+        "estimate": 2,
+        "createdAt": "2022-02-09T22:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "name": "Telerik",
+    "tasks": [
+      {
+        "id": 7,
+        "type": "Story",
+        "title": "Improve low performing MVC articles ",
+        "description": "There is a list of documentation articles that have very low satisfaction from our customers. We should revamp them.",
+        "assignee": "Venko",
+        "priority": "Low",
+        "status": "ToDo",
+        "estimate": 1,
+        "createdAt": "2022-01-12T22:00:00.000Z"
+      },
+      {
+        "id": 8,
+        "type": "Bug",
+        "title": "Telerik Grid has distorted appearance with bootstrap v5",
+        "description": "The Telerik UI Grid has appearance issues with the latest version of the bootstrap library.",
+        "assignee": "Peter",
+        "priority": "Normal",
+        "status": "InProgress",
+        "estimate": 2,
+        "createdAt": "2022-01-07T20:00:00.000Z"
+      },
+      {
+        "id": 9,
+        "type": "Story",
+        "title": "Wrapper for ColorGradient Component",
+        "description": "Add wrapper for the new Kendo UI jQuery ColoGradient widget.",
+        "assignee": "Angel",
+        "priority": "Normal",
+        "status": "ToDo",
+        "estimate": 2,
+        "createdAt": "2022-02-02T22:00:00.000Z"
+      },
+      {
+        "id": 10,
+        "type": "Bug",
+        "title": "Grid not exporting the data to Excel",
+        "description": "With R1 2022, the grid stopped downloading an xlsx file when the user clicks on the 'Export to Excel' button",
+        "assignee": "Tsvetomir",
+        "priority": "Critical",
+        "status": "Done",
+        "estimate": 3,
+        "createdAt": "2022-02-01T18:00:00.000Z"
+      },
+      {
+        "id": 11,
+        "type": "Story",
+        "title": "Deprecate the old MVC extensions",
+        "description": "The old MVC extensions are now substituted with the new Telerik UI MVC components. The extensions should be deprecated",
         "assignee": "Ivan",
         "priority": "Low",
         "status": "ReadyForTest",
@@ -53,9 +129,10 @@
         "createdAt": "2022-01-02T11:00:00.000Z"
       },
       {
+        "id": 12,
         "type": "Bug",
-        "title": "DataSource LINQ expressions throw error with .NET 6",
-        "description": "The LINQ expressions used by the DataSource throw a server error when used in a .NET 6 project",
+        "title": "Submitting a form in a live demo redirects to a new page",
+        "description": "When the form is submitted, the page should be refreshed but the href location should not be alternated.",
         "assignee": "Tsvetomir",
         "priority": "Critical",
         "status": "ToDo",
