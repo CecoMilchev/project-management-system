@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ProjectDetailsComponent } from './project-details/project-details.component';
 import { TaskComponent } from './task/task.component';
-import { TaskDetailsComponent } from './task-details/task-details.component';
 import { TaskDirective } from './project-task-detail.directive';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { PopupPreviewComponent } from './popup-preview/popup-preview.component';
@@ -22,7 +21,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProjectComponent,
     ProjectDetailsComponent,
     TaskComponent,
-    TaskDetailsComponent,
     TaskDirective,
     PopupPreviewComponent,
     PopupEditComponent
